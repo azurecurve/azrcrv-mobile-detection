@@ -48,6 +48,9 @@ To install the Mobile Detection plugin:
 
 == Changelog ==
 Changes and feature additions for the Mobile Detection plugin:
+= 1.0.1 =
+* Update azurecurve menu for easier maintenance.
+* Move require of azurecurve menu below security check.
 = 1.0.0 =
 * First version for ClassicPress forked from azurecurve Mobile Detection WordPress Plugin.
 
