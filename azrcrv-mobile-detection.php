@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Mobile Detection
  * Description: Plugin providing shortcodes and functions to allow different content to be served to different types of device (Desktop, Tablet, Phone); also includes checks on types of device (iOS, iPhone, iPad, Android, Windows Phone) and mobile browsers (Chrome, Firefox, IE, Opera, WebKit). Uses the PHP Mobile Detect class.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/mobile-detection
@@ -24,6 +24,10 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname( __FILE__).'/pluginmenu/menu.php');
+register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_md');
+
+// include update client
+require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
 
 /**
  * Setup registration activation hook, actions, filters and shortcodes.
@@ -35,6 +39,7 @@ require_once(dirname( __FILE__).'/pluginmenu/menu.php');
 // add actions
 add_action('admin_menu', 'azrcrv_md_create_admin_menu');
 add_action('network_admin_menu', 'azrcrv_md_create_network_admin_menu');
+add_action('plugins_loaded', 'azrcrv_md_load_languages');
 
 // add filters
 add_filter('plugin_action_links', 'azrcrv_md_add_plugin_action_link', 10, 2);
@@ -65,6 +70,17 @@ add_shortcode('isopera', 'azrcrv_md_is_Opera_shortcode');
 add_shortcode('istv', 'azrcrv_md_is_TV_shortcode');
 add_shortcode('iswebkit', 'azrcrv_md_is_WebKit_shortcode');
 add_shortcode('isconsole', 'azrcrv_md_is_Console_shortcode');
+
+/**
+ * Load language files.
+ *
+ * @since 1.0.0
+ *
+ */
+function azrcrv_md_load_languages() {
+    $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
+    load_plugin_textdomain('azrcrv-md', false, $plugin_rel_path);
+}
 
 /**
  * Add Mobile Detection action link on plugins page.
@@ -117,7 +133,7 @@ function azrcrv_md_display_options(){
 	
 	?>
 	<div id="azrcrv-md-general" class="wrap">
-		<h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+		<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 
 		<table class="form-table">
 			<tr>
