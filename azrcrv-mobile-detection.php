@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Mobile Detection
  * Description: Plugin providing shortcodes and functions to allow different content to be served to different types of device (Desktop, Tablet, Phone); also includes checks on types of device (iOS, iPhone, iPad, Android, Windows Phone) and mobile browsers (Chrome, Firefox, IE, Opera, WebKit). Uses the PHP Mobile Detect class.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/mobile-detection
@@ -79,7 +79,7 @@ add_shortcode('isconsole', 'azrcrv_md_is_Console_shortcode');
  */
 function azrcrv_md_load_languages() {
     $plugin_rel_path = basename(dirname(__FILE__)).'/languages';
-    load_plugin_textdomain('azrcrv-md', false, $plugin_rel_path);
+    load_plugin_textdomain('mobile-detection', false, $plugin_rel_path);
 }
 
 /**
