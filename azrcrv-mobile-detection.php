@@ -24,7 +24,7 @@ if (!defined('ABSPATH')){
 
 // include plugin menu
 require_once(dirname( __FILE__).'/pluginmenu/menu.php');
-register_activation_hook(__FILE__, 'azrcrv_create_plugin_menu_md');
+add_action('admin_init', 'azrcrv_create_plugin_menu_md');
 
 // include update client
 require_once(dirname(__FILE__).'/libraries/updateclient/UpdateClient.class.php');
