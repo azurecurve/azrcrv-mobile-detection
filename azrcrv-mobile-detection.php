@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Mobile Detection
  * Description: Plugin providing shortcodes and functions to allow different content to be served to different types of device (Desktop, Tablet, Phone); also includes checks on types of device (iOS, iPhone, iPad, Android, Windows Phone) and mobile browsers (Chrome, Firefox, IE, Opera, WebKit). Uses the PHP Mobile Detect class.
- * Version: 1.1.5
+ * Version: 1.2.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/mobile-detection/
@@ -43,6 +43,8 @@ add_action('plugins_loaded', 'azrcrv_md_load_languages');
 
 // add filters
 add_filter('plugin_action_links', 'azrcrv_md_add_plugin_action_link', 10, 2);
+add_filter('codepotent_update_manager_image_path', 'azrcrv_md_custom_image_path');
+add_filter('codepotent_update_manager_image_url', 'azrcrv_md_custom_image_url');
 
 // add shortcodes
 add_shortcode('ismobile', 'azrcrv_md_is_mobile_shortcode');
@@ -83,6 +85,32 @@ function azrcrv_md_load_languages() {
 }
 
 /**
+ * Custom plugin image path.
+ *
+ * @since 1.2.0
+ *
+ */
+function azrcrv_md_custom_image_path($path){
+    if (strpos($path, 'azrcrv-mobile-detection') !== false){
+        $path = plugin_dir_path(__FILE__).'assets/pluginimages';
+    }
+    return $path;
+}
+
+/**
+ * Custom plugin image url.
+ *
+ * @since 1.2.0
+ *
+ */
+function azrcrv_md_custom_image_url($url){
+    if (strpos($url, 'azrcrv-mobile-detection') !== false){
+        $url = plugin_dir_url(__FILE__).'assets/pluginimages';
+    }
+    return $url;
+}
+
+/**
  * Add Mobile Detection action link on plugins page.
  *
  * @since 1.0.0
@@ -96,7 +124,7 @@ function azrcrv_md_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.get_bloginfo('wpurl').'/wp-admin/admin.php?page=azrcrv-md"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'mobile-detection').'</a>';
+		$settings_link = '<a href="'.admin_url('admin.php?page=azrcrv-md').'"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'mobile-detection').'</a>';
 		array_unshift($links, $settings_link);
 	}
 
