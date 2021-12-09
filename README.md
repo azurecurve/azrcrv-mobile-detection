@@ -30,9 +30,7 @@ All shortcodes available as functions with an `azrcrv_md` prefix for calling fro
 
 Uses [PHP Mobile Detect](http://mobiledetect.net/) class, the lightweight PHP class for detecting mobile devices (including tablets).
 
-This plugin is multisite compatible..
-
-== Installation ==
+This plugin is multisite compatible.
 
 # Installation Instructions
 
