@@ -1,0 +1,84 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mobile Detection\n"
+"POT-Creation-Date: 2021-12-27 18:07+0000\n"
+"PO-Revision-Date: 2019-02-24 18:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: translate@azurecurve.co.uk\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: azrcrv-mobile-detection.php\n"
+
+#: azrcrv-mobile-detection.php:127
+msgid "Settings"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:144 azrcrv-mobile-detection.php:245
+msgid "Mobile Detection Settings"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:145 azrcrv-mobile-detection.php:246
+#: azrcrv-mobile-detection.php:267
+msgid "Mobile Detection"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:159
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: azrcrv-mobile-detection.php:175 azrcrv-mobile-detection.php:273
+msgid ""
+"Mobile Detection provides shortcodes and functions to allow different "
+"content to be served to different types of device:"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:179 azrcrv-mobile-detection.php:180
+#: azrcrv-mobile-detection.php:181 azrcrv-mobile-detection.php:182
+#: azrcrv-mobile-detection.php:183 azrcrv-mobile-detection.php:184
+#: azrcrv-mobile-detection.php:185 azrcrv-mobile-detection.php:186
+#: azrcrv-mobile-detection.php:187 azrcrv-mobile-detection.php:188
+#: azrcrv-mobile-detection.php:189 azrcrv-mobile-detection.php:190
+#: azrcrv-mobile-detection.php:191 azrcrv-mobile-detection.php:192
+#: azrcrv-mobile-detection.php:193 azrcrv-mobile-detection.php:194
+#: azrcrv-mobile-detection.php:195 azrcrv-mobile-detection.php:196
+#: azrcrv-mobile-detection.php:197 azrcrv-mobile-detection.php:277
+#: azrcrv-mobile-detection.php:278 azrcrv-mobile-detection.php:279
+#: azrcrv-mobile-detection.php:280 azrcrv-mobile-detection.php:281
+#: azrcrv-mobile-detection.php:282 azrcrv-mobile-detection.php:283
+#: azrcrv-mobile-detection.php:284 azrcrv-mobile-detection.php:285
+#: azrcrv-mobile-detection.php:286 azrcrv-mobile-detection.php:287
+#: azrcrv-mobile-detection.php:288 azrcrv-mobile-detection.php:289
+#: azrcrv-mobile-detection.php:290 azrcrv-mobile-detection.php:291
+#: azrcrv-mobile-detection.php:292 azrcrv-mobile-detection.php:293
+#: azrcrv-mobile-detection.php:294 azrcrv-mobile-detection.php:295
+msgid "Available as function call"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:189 azrcrv-mobile-detection.php:190
+#: azrcrv-mobile-detection.php:287 azrcrv-mobile-detection.php:288
+#, php-format
+msgid "Alternative shortcode %s available"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:200 azrcrv-mobile-detection.php:298
+msgid ""
+"All function calls available with <em>azc</em> prefix for backward "
+"compatibility"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:206 azrcrv-mobile-detection.php:304
+msgid ""
+"has the following plugins which allow shortcodes to be used in comments and "
+"widgets:"
+msgstr ""
+
+#: azrcrv-mobile-detection.php:262
+msgid "You do not have permissions to perform this action"
+msgstr ""
